@@ -11,20 +11,11 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { auth } from "../firebase/firebase";
 import { useHistory } from "react-router-dom";
-import Link from "@material-ui/core/Link";
 
 function Copyright() {
   return (
-    // <Typography variant="body2" color="textSecondary" align="center">
-    //   {" ©Copyright "}
-    //   {new Date().getFullYear()}
-    //   {"."}
-    // </Typography>
     <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
+      {" ©Copyright "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -93,7 +84,7 @@ const Signin = () => {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
-        history.push("/portfolio");
+        history.push("/");
       })
       .catch((e) => {
         alert("メールアドレスかパスワードか違います");
@@ -149,19 +140,6 @@ const Signin = () => {
             >
               Sign In
             </Button>
-
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
 
             <Box mt={5}>
               <Copyright />
