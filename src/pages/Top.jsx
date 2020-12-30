@@ -1,5 +1,11 @@
 import React from "react";
+import { Header } from "../templates/Header";
 
 export const Top = () => {
-  return <div>Topページ</div>;
+  return (
+    <>
+      <Header />
+      <div>Topページ</div>
+    </>
+  );
 };
