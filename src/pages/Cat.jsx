@@ -1,5 +1,10 @@
 import React from "react";
-
+import { Header } from "../templates/Header";
 export const Cat = () => {
-  return <div>Catページ</div>;
+  return (
+    <>
+      <Header />
+      <div>Catページ</div>
+    </>
+  );
 };
